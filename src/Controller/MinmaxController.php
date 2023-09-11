@@ -20,4 +20,16 @@ class MinmaxController extends AbstractController
             'notes' => $notes // Supprimez les guillemets autour de $notes
         ]);
     }
+    #[Route('/tab/users', name: 'tab.users')]
+    public  function  users(): Response {
+        $users= [
+            ['firstname'=>'Ndong', 'lastname'=>'Aboubakry', 'age'=>27],
+            ['firstname'=>'soumaré', 'lastname'=>'Marieme', 'age'=>67],
+            ['firstname'=>'Ndong', 'lastname'=>'Sadio', 'age'=>20],
+
+        ];
+        return $this->render('/todo/users.html.twig', [
+            'users'=>$users
+        ]);
+    }
 }

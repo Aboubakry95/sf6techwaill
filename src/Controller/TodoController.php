@@ -93,4 +93,5 @@ class TodoController extends AbstractController
        $session->remove('todos');
         return $this->redirectToRoute('todo'); // Correction du nom de la route
     }
+
         }
