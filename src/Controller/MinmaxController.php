@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MinmaxController extends AbstractController
 {
-    #[Route('/tab/{nb<\d+>?5}', name: 'app_minmax')]
+    #[Route('/tab/{nb<\d+>?5}', name: 'tab')]
     public function index($nb): Response
     {
         $notes = [];
